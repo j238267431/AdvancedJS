@@ -1,0 +1,4 @@
+.burgers, .toppings{
+   display: flex;
+   flex-direction: column;
+}

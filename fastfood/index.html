@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="burgers">
+       <p>Burgers</p>
+      <div>
+        <input type="radio" name="burger" value="small" id="small" />
+        <label for="small">Маленький (50 рублей, 20 калорий)</label>
+      </div>
+      <div>
+        <input type="radio" name="burger" value="big" id="big" />
+        <label for="big">Большой (100 рублей, 40 калорий)</label>
+      </div>
+    </div>
+
+    <div class="toppings">
+       <p>Toppings</p>
+       <div class="topping_1">
+          <input type="radio" name = "toppings" id = "toppings" value ="cheese" data-cost = 10 data-fat = 20>
+          <label for="toppings">С сыром (+10 рублей, +20 калорий)</label>
+       </div>
+       <div class="topping_2">
+         <input type="radio" name = "toppings" id = "toppings" value ="salad">
+         <label for="toppings">С салатом (+20 рублей, +5 калорий)</label>
+       </div>
+       <div class="topping_3">
+         <input type="radio" name = "toppings" id = "toppings" value ="potato">
+         <label for="toppings">С картофелем (+15 рублей, +10 калорий)</label>
+       </div>
+    </div>
+
+    <script src="burger.js"></script>
+  </body>
+</html>
