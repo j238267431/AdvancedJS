@@ -1,101 +1,115 @@
 'use strict'
 
 class Hamburger {
-  constructor (size, stuffing) {
-   this.size = size
-   this.topping = stuffing
-   this.price = null
-   this.calories= null
-
-  this.burgerArr = []
-  this.toppingArr = []
-  this._fetchBurgers()
+  constructor () {
+    this.burgerPrice = null
+    this.burgerFat = null
+    this.toppingPrice = null
+    this.toppingFat = null
+    this.stuffingPrice = null
+    this.stuffingFat = null
+    this.toppingButton = document.getElementById('toppings')
+    this.message = document.getElementsByClassName('message')[0]
+    this.costSpan = document.getElementById('cost')
+    this.fatSpan = document.getElementById('fat')
+    //  this.burgerSize = this.getSize()
   }
 
-  _fetchBurgers(){
-     this.burgerArr = [
-        {name: 'small', price: 50, calories: 20},
-        {name: 'big', price: 100, calories: 40}
-     ]
-  }
-
-
-//   addTopping (topping) {
-//     // Добавить добавку
-//   }
-//   removeTopping (topping) {
-//     // Убрать добавку
-//   }
-
-  getSize(){
-     let choosedBurger = document.getElementsByName('burger')
-     for (let burger of choosedBurger){
-        burger.addEventListener('click', (event) => {
-         switch (event.toElement.value){
-            case 'small': 
-            this.price = +50
-            this.calories = +20
-            break
-            case 'big':
-           this.price = +100
-           this.calories = +40
-           break
-         }
-         this.getToppings(event.toElement.value)
-
-        })
-     }
+  getSize () {
+    let choosedBurger = document.getElementsByName('burger')
+    for (let burger of choosedBurger) {
+      burger.addEventListener('click', event => {
+        this.burgerPrice = +event.toElement.dataset.cost
+        this.burgerFat = +event.toElement.dataset.fat
+      //   this.calculatePrice()
+      //   this.calculateCalories()
+        this.toppingButton.classList.remove('hide')
+        this.showMessage()
+      })
+    }
     // Узнать размер гамбургера
-
   }
 
-  getToppings (size) {
-   let choosedTopping = document.getElementsByName('toppings')
-   // this.price = null
-   // this.calories = null
-   for (let topping of choosedTopping){
-      topping.addEventListener('click', (event) => {
-      //  const hamburger = new Hamburger(size, event.toElement.value)
-      switch(event.toElement.value){
-         case 'cheese':
-            this.price += 10
-            this.calories += 20
-            break
-         case 'salad':
-            this.price += 20
-            this.calories += 5
-            break
-         case 'potato':
-            this.price += 15
-            this.calories += 10
-            break
-      }
-      this.calculatePrice()
-   })
- }
-   
-   // this.calculateCalories()
-  // Получить список добавок
-}
+  getToppings () {
+    let choosedTopping = document.getElementsByName('toppings')
+    for (let topping of choosedTopping) {
+      topping.addEventListener('click', event => {
+        this.toppingPrice = +event.toElement.dataset.cost
+        this.toppingFat = +event.toElement.dataset.fat
+      //   this.calculatePrice()
+      //   this.calculateCalories()
+      this.showMessage()
+      })
+    }
 
-  calculatePrice () {
-     console.log(` стоимость бургера ${this.price} калорийность ${this.calories}`)
+    // this.calculateCalories()
+    // Получить список добавок
+  }
+
+  calculatePrice (price) {
+   //  console.log(
+      return this.burgerPrice +
+        this.toppingPrice +
+        this.stuffingPrice
+   //  )
     // Узнать цену
-//   }
-//   calculateCalories () {
-   
-    // Узнать калорийность
+  }
+  calculateCalories (fat) {
+   //  console.log(
+      return this.burgerFat +
+        this.toppingFat +
+        this.stuffingFat
+   //  )
+    //  Узнать калорийность
   }
 
+  getStuffing () {
+    let choosedStuffing = document.getElementsByName('stuffing')
+    for (let stuffing of choosedStuffing) {
+      stuffing.addEventListener('click', () => {
+        this.stuffingPrice = null
+        this.stuffingFat = null
+        for (let checked of choosedStuffing) {
+          if (checked.checked) {
+            this.stuffingPrice += +checked.dataset.cost
+            this.stuffingFat += +checked.dataset.fat
+          }
+        }
+      //   this.calculatePrice()
+      //   this.calculateCalories()
+      this.showMessage()
+      })
+    }
+    // Узнать начинку гамбургера
+  }
 
+  showToppings () {
+    this.toppingButton.addEventListener('click', () => {
+      let blockToppings = document.getElementsByTagName('body')
+      if (this.toppingButton.innerText === 'выбрать начинки') {
+        blockToppings[0].children[2].classList.remove('hide')
+        blockToppings[0].children[3].classList.remove('hide')
+        this.toppingButton.innerText = 'скрыть начинки'
+      } else {
+        blockToppings[0].children[2].classList.add('hide')
+        blockToppings[0].children[3].classList.add('hide')
+        this.toppingButton.innerText = 'выбрать начинки'
+      }
+    })
+  }
+  showMessage(){
+   this.costSpan.innerText = ''
+   this.fatSpan.innerText = ''
+     this.costSpan.insertAdjacentHTML('beforeend', this.calculatePrice())
+     this.fatSpan.insertAdjacentHTML('beforeend', this.calculateCalories())
+  }
+  getMessage(){
+     `<p>${this.calculatePrice}</p>`
+  }
 }
-//   getStuffing () {
-//     // Узнать начинку гамбургера
-//   }
-
-
-
-
 const hamburger = new Hamburger()
 hamburger.getSize()
-
+hamburger.getToppings()
+hamburger.getStuffing()
+hamburger.showToppings()
+// hamburger.isBurgerChoosed()
