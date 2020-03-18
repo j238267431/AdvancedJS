@@ -1,0 +1,32 @@
+body{
+   position: relative;
+}
+
+.burgers, .toppings{
+   display: flex;
+   flex-direction: column;
+}
+
+.hide{
+   display: none;
+}
+button{
+  border-radius: 10px;
+   padding: 5px 10px;
+   margin-top: 10px;
+   outline: none;
+}
+button:hover{
+   background-color: black;
+   color: white;
+   cursor: pointer;
+   transition: all .3s;
+}
+.message{
+   position: absolute;
+   height: 200px;
+   width:300px;
+   border: 1px solid black;
+   top: 10px;
+   left: 400px;
+}
