@@ -1,5 +1,6 @@
 body{
     font-family: 'SF Pro Display', sans-serif;
+    position: relative;
 }
 header{
     display: flex;
@@ -39,7 +40,7 @@ button{
     grid-template-columns: repeat(auto-fit, 200px);
     grid-template-rows: 1fr;
     padding: 40px 80px;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 p {
     margin: 0 0 5px 0;
@@ -74,4 +75,14 @@ img {
     background-color: transparent;
     border-color: #2f2a2d;
     color: #2f2a2d;
+}
+.hidden{
+    display: none;
+}
+
+.cart{
+    position: absolute;
+    right: 50px;
+    top: 150px;
+    border: 1px solid black
 }
