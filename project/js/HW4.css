@@ -1,0 +1,22 @@
+.hidden{
+   display: none;
+
+}
+.color{
+   color: red;
+}
+.inputLine{
+   width: 150px;
+   height: 18px;
+   border:1px solid red;
+
+}
+.input{
+   width: 150px;
+   height: 18px;
+   border:1px solid black;
+}
+
+div{
+   margin-bottom: 10px;
+}
