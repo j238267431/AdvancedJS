@@ -1,0 +1,17 @@
+{
+   "amount": null,
+   "countGoods": null,
+   "contents": [
+    {
+      "id_product": 9001,
+      "product_name": "футболка",
+      "sex": "men",
+      "color": ["blue","red"],
+      "size": ["S","XS","M","L","XL","XXL"],
+      "price": 600,
+      "img": "img/featured/1.png",
+      "category": "Dresses",
+      "quantity": 2
+    }
+   ]
+}
