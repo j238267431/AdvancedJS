@@ -93,7 +93,7 @@ export default {
          this.$store.state.cartData.amount = 0
      },
      remove(item) {
-      this.$store.dispatch('deleteJson');
+      this.$store.dispatch('deleteJson', {'item': item});
       this.cartItems = this.$store.state.cartData.contents;
       if (item.quantity > 1) {
           item.quantity--;
