@@ -1,0 +1,154 @@
+[
+
+   {
+     "id_product": 9001,
+     "product_name": "футболка",
+     "sex": "men",
+     "color": ["blue","red"],
+     "size": ["S","XS","M","L","XL","XXL"],
+     "price": 600,
+     "img": "img/featured/1.png",
+     "category": "Dresses"
+   },
+   {
+      "id_product": 9002,
+      "product_name": "футболка",
+      "sex": "women",
+      "color": ["blue","red"],
+      "size": ["S","XS","M","L","XL","XXL"],
+      "price": 900,
+      "img": "img/featured/2.png",
+      "category": "Tops"
+    },
+    {
+      "id_product": 9003,
+      "product_name": "куртка",
+      "sex": "men",
+      "color": ["blue","red"],
+      "size": ["S","XS","M","L","XL","XXL"],
+      "price": 2399,
+      "img": "../img/featured/3.png",
+      "category": "Sweaters/Knits"
+    },
+    {
+      "id_product": 9004,
+      "product_name": "платье",
+      "sex": "women",
+      "color": ["blue","red"],
+      "size": ["S","XS","M","L","XL","XXL"],
+      "price": 1999,
+      "img": "../img/featured/4.png",
+      "category": "Jackets/Coats"
+    },
+    {
+      "id_product": 9005,
+      "product_name": "костюм",
+      "sex": "men",
+      "color": ["blue","red"],
+      "size": ["S","XS","M","L","XL","XXL"],
+      "price": 5600,
+      "img": "../img/featured/5.png",
+      "category": "Denim Leggings/Pants"
+    },
+    {
+      "id_product": 9006,
+      "product_name": "костюм",
+      "sex": "men",
+      "color": ["blue","red"],
+      "size": ["S","XS","M","L","XL","XXL"],
+      "price": 600,
+      "img": "../img/featured/6.png",
+      "category": "Hats"
+    },
+    {
+      "id_product": 9007,
+      "product_name": "брюки",
+      "sex": "women",
+      "color": ["blue","red"],
+      "size": ["S","XS","M","L","XL","XXL"],
+      "price": 2399,
+      "img": "../img/featured/7.png",
+      "category": "Skirts/Shorts"
+    },
+    {
+      "id_product": 9008,
+      "product_name": "платье",
+      "sex": "women",
+      "color": ["blue","red"],
+      "size": ["S","XS","M","L","XL","XXL"],
+      "price": 2800,
+      "img": "../img/featured/8.png",
+      "category": "Accessories"
+    },
+    {
+      "id_product": 9009,
+      "product_name": "толстовка",
+      "sex": "men",
+      "color": ["blue","red"],
+      "size": ["S","XS","M","L","XL","XXL"],
+      "price": 609,
+      "img": "../img/featured/7.png",
+      "category": "Tees/Tank"
+    },
+    {
+      "id_product": 9010,
+      "product_name": "толстовка",
+      "sex": "men",
+      "color": ["blue","red"],
+      "size": ["S","XS","M","L","XL","XXL"],
+      "price": 300,
+      "img": "../img/featured/6.png",
+      "category": "tops"
+    },
+    {
+      "id_product": 9011,
+      "product_name": "брюки",
+      "sex": "women",
+      "color": ["blue","red"],
+      "size": ["S","XS","M","L","XL","XXL"],
+      "price": 3996,
+      "img": "../img/featured/5.png",
+      "category": "Shirts/Polos"
+    },
+    {
+      "id_product": 9012,
+      "product_name": "брюки",
+      "sex": "men",
+      "color": ["blue","red"],
+      "size": ["S","XS","M","L","XL","XXL"],
+      "price": 99,
+      "img": "../img/featured/4.png",
+      "category": "Sweaters"
+    },
+    {
+      "id_product": 9013,
+      "product_name": "брюки",
+      "sex": "women",
+      "color": ["blue","red"],
+      "size": ["S","XS","M","L","XL","XXL"],
+      "price": 299,
+      "img": "../img/featured/3.png",
+      "category": "Sweatshirts/Hoodies"
+    },
+    {
+      "id_product": 9014,
+      "product_name": "брюки",
+      "sex": "men",
+      "color": ["blue","red"],
+      "size": ["S","XS","M","L","XL","XXL"],
+      "price": 399,
+      "img": "../img/featured/2.png",
+      "category": "Blazers"
+    },
+    {
+      "id_product": 9015,
+      "product_name": "брюки",
+      "sex": "women",
+      "color": ["blue","red"],
+      "size": ["S","XS","M","L","XL","XXL"],
+      "price": 2399,
+      "img": "../img/featured/1.png",
+      "category": "Jackets/vests"
+    }
+   
+ ]
